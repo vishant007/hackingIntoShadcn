@@ -7,8 +7,8 @@ function UserAvatar({
 	image,
 	className,
 }: {
-	name: string;
-	image: string;
+	name?: string | null;
+	image?: string | null;
 	className?: string;
 }) {
 	return (
@@ -16,7 +16,7 @@ function UserAvatar({
 			{image && (
 				<img
 					src={image}
-					alt={name}
+					alt={name || 'User Name'}
 					width={50}
 					height={50}
 					className='rounded-full'
