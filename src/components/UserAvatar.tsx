@@ -12,17 +12,22 @@ function UserAvatar({
 	className?: string;
 }) {
 	return (
-		<Avatar className={cn('bg-white text-black', className)}>
+		<Avatar className={cn('bg-white text-black, className')}>
 			{image && (
 				<img
 					src={image}
 					alt={name}
-					width={40}
-					height={40}
+					width={50}
+					height={50}
 					className='rounded-full'
 				/>
 			)}
-			<AvatarFallback>CN</AvatarFallback>
+			<AvatarFallback className='dark:bg-white dark:text-black text-lg'>
+				{name
+					?.split(' ')
+					.map((n) => n[0])
+					.join('')}
+			</AvatarFallback>
 		</Avatar>
 	);
 }
