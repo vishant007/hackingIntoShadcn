@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<main className='p-10'>
 			<Nav />
-			<div className='grid grid-cols-2 gap-4 p-5 m-7 '>
+			<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 m-7 '>
 				<div className='flex flex-col gap-8 justify-center items-center p-5 '>
 					<TypographyH1 />
 					<div className='flex gap-5 justify-center items-center'>
